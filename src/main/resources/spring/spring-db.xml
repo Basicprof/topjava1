@@ -76,4 +76,12 @@
       p:username="${database.username}"
       p:password="${database.password}"/>
 </beans>
-        </beans>
+    <beans profile="jdbc">
+        <context:property-placeholder location="classpath:db/hsqldb.properties" system-properties-mode="OVERRIDE"/>
+
+    </beans>
+    <beans profile="datajpa , jpa"></beans>
+    <beans profile="jpa"></beans>
+       <beans profile="datajpa"> </beans>
+
+</beans>

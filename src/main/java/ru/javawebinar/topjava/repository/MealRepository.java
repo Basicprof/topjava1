@@ -12,6 +12,8 @@ public interface MealRepository {
     // false if meal do not belong to userId
     boolean delete(int id, int userId);
 
+    List<Meal>findAll();
+
     // null if meal do not belong to userId
     Meal get(int id, int userId);
 
